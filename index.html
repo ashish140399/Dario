@@ -57,6 +57,7 @@
 				</div>
 			</div>
 	</header>
+	<input type="hidden" id="cmt" name="cmt" value="">
 	<div class="blue_bg">
 		<div>Invest in the most famous and solid company,<br>
 		worth $ 1 trillion!</div>
@@ -72,10 +73,10 @@
 				</div><br>
 				<div style="position: relative;" class="sec_2_rcol1_inner">
 					<div class="euro">$</div>
-					<button class="btn ">Calculation</button>
-					<input type="" name="">
-
+					<button class="btn calc-btn">Calculation</button>
+					<input type="number" name="initial-value" id="initial-value">
 				</div>
+				<div style="font-size: 16px;;" class="error-msg-calc pt-2"></div>
 			</div>	
 			<div class="col-sm-6 sec_2_rcol2">
 				<div class="title">
@@ -83,7 +84,7 @@
 				</div><br>
 				<div style="position: relative;" class="sec_2_rcol2_inner">
 					<div class="euro">$</div>
-					<input type="" name="">
+					<input type="number" name="potencial-value" id="potencial-value" readonly>
 
 				</div>
 			</div>			
@@ -136,4 +137,40 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+	var err_msg_calculator = document.getElementsByClassName('error-msg-calc')[0];
+	var potencial = document.getElementById('potencial-value');
+	var initial = document.getElementById('initial-value');
+	var calculator_values = ""; // Calculator euro
+	var calc_btn = document.getElementsByClassName('calc-btn')[0];
+	calc_btn.addEventListener('click', function () {
+	  var initial_value = initial.value;
+	  calculator_values += initial_value + " ";
+	  var cmt = document.getElementById('cmt');
+	  cmt.value = calculator_values;
+	  err_msg_calculator.innerHTML = '';
+
+	  if (initial_value < 200) {
+	    potencial.value = '';
+	    err_msg_calculator.innerHTML = 'Investimento minimo: 200€';
+	    err_msg_calculator.style.color = 'red';
+	  } else if (initial_value == 200) {
+	    potencial.value = initial_value * 2;
+	    err_msg_calculator.innerHTML = '';
+	  } else if (initial_value > 200 && initial_value < 500) {
+	    potencial.value = initial_value * 2.5;
+	    err_msg_calculator.innerHTML = '';
+	  } else if (initial_value >= 500 && initial_value < 1000) {
+	    potencial.value = initial_value * 3.5;
+	    err_msg_calculator.innerHTML = '';
+	  } else if (initial_value >= 1000 && initial_value < 5000) {
+	    potencial.value = initial_value * 5;
+	    err_msg_calculator.innerHTML = '';
+	  } else if (initial_value >= 5000) {
+	    potencial.value = initial_value * 5.5;
+	    err_msg_calculator.innerHTML = '';
+	  }
+	}); // open second form
+
+</script>
 </html>
