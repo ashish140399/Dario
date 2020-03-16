@@ -20,15 +20,17 @@ body{
 	margin-left: 2em
 }
 header{
-	background-color: #E7EFF3;
+	background-color: #37475A;
 	position: relative;
+	background-image: url('images/hero-bg2.png');
+	    background-size: cover;
 }
 .header_cen_div{
 	text-align: center;
 	font-size: 33px;
-	color: #313131;
+	color: #f0f0f0;
 	font-weight: 700;
-    line-height: 1.2em;
+    line-height: 1.5em;
     position: absolute;
     top: 50%;
     left: 47%;
@@ -107,7 +109,9 @@ header{
 }
 
 
-
+.hero_bg{
+		height: 70vh
+	}
 
 
 
