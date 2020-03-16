@@ -22,10 +22,16 @@
 					<button class="btn header_cen_btn">Stima dei guadagni</button>
 			</div>
 			<div class="header_gif">
-				<img src="images/form-header.gif">
+				
 				<div class="header_gif_inner">
+					<div class="col-sm-12 header_gif_inner_heading">
+						OTTIENI SUBITO GRATIS TUTTE LE INFO CHE DESIDERI
+					</div>
 					<div class="col-sm-12">
-						<input type="" placeholder="Nome & Cognome">
+						<input type="" placeholder="Nome">
+					</div>
+					<div class="col-sm-12">
+						<input type="" placeholder="Cognome">
 					</div>
 					<div class="col-sm-12">
 						<input type="" placeholder="Email">
@@ -41,17 +47,22 @@
 						</div>
 					</div>
 					<div class="col-sm-12 header_content">
-						<div style="margin-top: 1em">
-							Accetto l’ <a href="">’Informativa sulla Privacy</a> , i <a href="">Termini e Condizioni* </a> e di ricevere materiale di marketing.
+						<div style="margin-top: 1em;display: flex;">
+							<div>
+								<input type="checkbox" id="vehicle1" class="header_cip" value="Bike">
+							</div>
+							<div>
+								Accetto l’ <a href="">’Informativa sulla Privacy</a> , i <a href="">Termini e Condizioni* </a> e di ricevere materiale di marketing.
+							</div>
 						</div>	
 						<button class="btn header_cen_btn header_gif_btn">Richiedi informazioni</button>	
-						<div class="header_disc">
+						<!--div class="header_disc">
 							Per investire in Amazon devi avere almeno 18 anni. Capitale minimo richiesto € 200
-						</div>				
+						</div-->				
 					</div>
-					<div class="col-sm-12 header_payment">
+					<!--div class="col-sm-12 header_payment">
 						<img src="images/payment-methods-grey.png">
-					</div>
+					</div-->
 					
 					
 				</div>
@@ -72,7 +83,7 @@
 					INVESTIMENTO INIZIALE
 				</div><br>
 				<div style="position: relative;" class="sec_2_rcol1_inner">
-					<div class="euro">$</div>
+					<div class="euro">€</div>
 					<button class="btn calc-btn">CALCOLO</button>
 					<input type="number" name="initial-value" id="initial-value">
 				</div>
@@ -83,7 +94,7 @@
 					GUADAGNI POTENZIALI
 				</div><br>
 				<div style="position: relative;" class="sec_2_rcol2_inner">
-					<div class="euro">$</div>
+					<div class="euro">€</div>
 					<input type="number" name="potencial-value" id="potencial-value" readonly>
 
 				</div>
